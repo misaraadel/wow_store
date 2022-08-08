@@ -1,0 +1,113 @@
+@media (max-width: 999px) {
+  .navbar {
+    .hamburger {
+      display: block !important;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--light-color) !important;
+      position: absolute;
+      top: 80px;
+      right: -100%;
+      z-index: 9999;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      text-align: center !important;
+      transition: all .3s linear;
+
+      li {
+        width: 100%;
+        border-bottom: 1px solid #f7f7f7;
+        padding: 10px 20px;
+        text-align: start;
+
+        a {
+          width: 100%;
+          padding-inline-start: 15px !important;
+          padding-bottom: 0px !important;
+          display: flex;
+
+          &::after {
+            width: 10px !important;
+            height: 10px !important;
+            background-color: var(--primary-color);
+            top: 5px !important;
+            bottom: unset !important;
+            right: 0px !important;
+            left: unset !important;
+            border-radius: 2px;
+            transform: scale(1) !important;
+          }
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: url('../images/icon.png') center / contain no-repeat;
+        bottom: 100px;
+        left: 50px;
+        opacity: .5;
+        z-index: -1;
+      }
+
+      &.active-nav {
+        right: 0px;
+      }
+    }
+
+    .icons-contain {
+      width: 100%;
+      padding: 20px 10px;
+      position: fixed !important;
+      background-color: var(--light);
+      bottom: 0;
+      justify-content: center !important;
+      left: 0;
+      z-index: 9997;
+      box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.2);
+      
+      li {
+        width: calc(100% / 3 ) !important;
+
+        a {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+        }
+
+        span {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .custom-heading {
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+
+    .heading {
+      margin-bottom: 20px !important;
+    }
+
+    .see-more {
+      margin-right: auto !important;
+    }
+  }
+
+  .banners .banner-box {
+    height: 200px !important;
+  }
+
+  header .item {
+    padding: 100px 0px !important;
+  }
+}
