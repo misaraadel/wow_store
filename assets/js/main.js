@@ -78,6 +78,27 @@ $(document).ready(function () {
         }
     });
 
+    $('.owl-single-product').owlCarousel({
+        rtl: true,
+        loop:true,
+        margin: 20,
+        nav:false,
+        dots: true,
+        autoplay: false,
+        touchDrag  :true,
+		mouseDrag  : true,
+		autoWidth: false,
+		animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayTimeout: 2000,
+		smartSpeed: 2000,
+		dragEndSpeed: 2000,
+		slidSpeed: 900,
+        paginationSpeed: 900,
+        autoplayHoverPause: true,
+        items:1
+    });
+
     $('.owl-products').owlCarousel({
         rtl: true,
         loop:true,
